@@ -1,0 +1,24 @@
+{
+  "type": "status_change",
+  "status": "configuring",
+  "mem": {
+  },
+  "nodes": [
+    {
+      "name": "host1",
+       "ssh_hostname": "c153",
+      "worker": {"host": "127.0.0.1", "port": 11091},
+      "index_shipper": {"host": "127.0.0.1", "port": 53411}
+    },
+    {
+      "name": "host1",
+       "ssh_hostname": "c151",
+      "worker": {"host": "142.150.234.151", "port": 11091},
+      "index_shipper": {"host": "142.150.234.151", "port": 53411}
+    }
+  ],
+  "controller": {
+    "http_port": 7878,
+    "rpc_port": 8989
+  }
+}

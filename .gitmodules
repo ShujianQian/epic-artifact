@@ -4,3 +4,6 @@
 [submodule "sto"]
 	path = sto
 	url = https://github.com/ShujianQian/sto.git
+[submodule "caracal"]
+	path = caracal
+	url = https://github.com/ShujianQian/felis.git

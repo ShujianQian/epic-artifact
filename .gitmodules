@@ -1,0 +1,3 @@
+[submodule "epic"]
+	path = epic
+	url = https://github.com/ShujianQian/epic-eval.git

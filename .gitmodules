@@ -1,3 +1,6 @@
 [submodule "epic"]
 	path = epic
 	url = https://github.com/ShujianQian/epic-eval.git
+[submodule "sto"]
+	path = sto
+	url = https://github.com/ShujianQian/sto.git

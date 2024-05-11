@@ -56,7 +56,7 @@ echo "export PATH=/usr/local/cuda/bin:\$PATH" >> ${USER_HOME}/.profile
 echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64:\$LD_LIBRARY_PATH" >> ${USER_HOME}/.profile
 
 # Install other dependencies
-apt-get install -y --quiet cmake binutils
+apt-get install -y --quiet cmake binutils libjemalloc-dev build-essential libnuma-dev ninja-build default-jre autoconf python-is-python3 clang zip make g++ libboost-dev libc++-dev libc++abi-dev
 
 
 echo -e "${GREEN}Installation completed successfully.${NC}"

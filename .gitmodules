@@ -7,3 +7,6 @@
 [submodule "caracal"]
 	path = caracal
 	url = https://github.com/ShujianQian/felis.git
+[submodule "aria"]
+	path = aria
+	url = https://github.com/ShujianQian/aria.git

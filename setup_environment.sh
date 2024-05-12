@@ -12,4 +12,4 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 echo -e "${GREEN}Setting up huge pages...${NC}"
-sysctl -w vm.nr_hugepages=30000
+sysctl -w vm.nr_hugepages=50000

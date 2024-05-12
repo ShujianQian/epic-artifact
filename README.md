@@ -22,7 +22,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 
 ![SSH Keys](<figs/4-ssh-key.png>)
 
-5. Now you are ready to deploy your server. Check the server configuartion and then push the deploy button.
+5. Now you are ready to deploy your server. Check the server configuration and then push the deploy button.
 
 ![Deploy server](<figs/5-deploy.png>)
 
@@ -30,7 +30,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 
 ![All Servers](<figs/6-all-servers.png>)
 
-7. Click on your server. To login to the server, you will need to use the username "ubuntu" and the IP address shown on the top right.
+7. Click on your server. To login to the server, you will need to use the username "ubuntu" and the IP address shown on the right.
 
 ![Server](<figs/7-server.png>)
 

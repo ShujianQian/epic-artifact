@@ -1,40 +1,69 @@
 # epic-artifact
 
-## 1. Request Virtual Machine
-1. Log into FluidStack with the provided credentials and go to the virtual machines page.
-![FluidStack Homepage](<figs/Screenshot 2024-05-11 at 4.00.56 AM.png>)
-1. Configure the virtual machine as shown in the figure. Make sure that the configuration matches exactly.
-![Virtual Machine Setup](<figs/Screenshot 2024-05-11 at 4.07.36 AM.png>)
-1. Push the deploy button at the bottom of the page.
-1. Go to the Your Servers page, and choose the server you just created.
-![alt text](<figs/Screenshot 2024-05-11 at 4.12.04 AM.png>)
-1. Wait until the server request is finished and the server starts to run before connecting to the server over SSH.
-![alt text](<figs/Screenshot 2024-05-11 at 4.14.40 AM.png>)
-1. When not in use, stop the server to only pay idle rate
-![alt text](<figs/Screenshot 2024-05-11 at 4.16.40 AM.png>)
-1. <mark>Make sure to delete the server after finishing the expriment to stop paying for it.</mark>
+This site provides the artifacts needed to run the experiments described in the paper "Massively Parallel Multi-Versioned Transaction Processing" accepted at OSDI 2024.
 
-## 2. Preparing Experiments on a Server
-1. ssh to the server
-1. clone this repo with submodules using
+Please follows the three steps shown below: 1) Setup (virtual machine) server, 2) Prepare server for the experiments, and 3) Run experiments on server.
+
+## 1. Setup (virtual machine) server
+
+1. Use your brower to access FluidStack at https://console.fluidstack.io and then login in with the provided credentials. Click on the Virtual Machines tab to create a virtual machine.
+
+![FluidStack Homepage](<figs/1-welcome.png>)
+
+2. Select Ubuntu 22.04 (Plain) for the OS template.
+
+![OS Template](<figs/2-os-template.png>)
+
+3. Select RTX A6000 48GB for the GPU server type. Select 4 GPUs per server.
+
+![GPU Type](<figs/3-gpu-selection.png>)
+
+4. Add your SSH public key to access the server. If you have a github public key, you can copy and paste it from https://github.com/[gitusername].keys. Also, name your server so that you can identify it.
+
+![SSH Keys](<figs/4-ssh-key.png>)
+
+5. Now you are ready to deploy your server. Check the server configuration and then push the deploy button.
+
+![Deploy server](<figs/5-deploy.png>)
+
+6. Click on the Your Servers tab to see your server. Wait for your server to start running. You will see a green dot on the left when your server is running.
+
+![All Servers](<figs/6-all-servers.png>)
+
+7. Click on your server. To login to the server, you will need to use the username "ubuntu" and the IP address shown on the right.
+
+![Server](<figs/7-server.png>)
+
+8. When the server is not in use, stop the server to only pay the idle rate. You can restart the server at any time and continue using it. Restarting a server takes a minute or so.
+
+![Manage Server](<figs/8-manage-server.png>)
+
+9. <mark>Make sure to delete the server after finishing the experiments to stop paying for the server. If you need to rerun the experiments, then you will need to redo all the steps shown here.</mark>
+
+## 2. Prepare server for the experiments
+1. Login to the the server using `ssh ubuntu@server_ipaddr`.
+1. Clone this repo with submodules.
    ```bash
    git clone --recursive https://github.com/ShujianQian/epic-artifact.git
    ```
-1. install dependencies with
+1. Install dependencies.
    ```bash
    cd epic-artifact
    sudo ./install_dependencies.sh
    ```
-   This script installs all dependencies required for the experiment including the GPU driver. At the end of the script, it will reboot the server to start running the GPU driver. Reconnect SSH after rebooting.
+   This script installs all dependencies required for the experiments including the GPU driver. The script requires sudo privileges to install packages on your server. It will run for roughly 10 minutes, so get a coffee.
 
-   <mark>The script requires sudo privilege to install the packages.</mark>
-1. build the executables for all systems using the build_binaries.sh script.
+   <mark> At the end, the script will reboot the server to start running the GPU driver.</mark>
+1. Reconnect to the server after it has rebooted and go to the artifact directory.
    ```bash
+   ssh ubuntu@server_ipaddr   
    cd epic-artifact
+   ```
+1. Build the executables for all systems using the build_binaries.sh script.
+   ```bash
    ./build_binaries.sh
-   ``` 
-   <mark>Make sure the pwd is in the repo root before running the script.</mark>
-
+   ```
+   This script will run for roughly 4 minutes.
 ## 3. Running Experiments
 WIP
 

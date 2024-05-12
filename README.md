@@ -62,7 +62,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
    ssh ubuntu@server_ipaddr
    cd epic-artifact
    ```
-1. Build the executables for all systems using the build_binaries.sh script.
+1. Build the executables for all systems.
    ```bash
    ./build_binaries.sh
    ```

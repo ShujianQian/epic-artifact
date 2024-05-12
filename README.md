@@ -1,20 +1,29 @@
 # epic-artifact
 
-## 1. Request Virtual Machine
-1. Log into FluidStack with the provided credentials and go to the virtual machines page.
-![FluidStack Homepage](<figs/Screenshot 2024-05-11 at 4.00.56 AM.png>)
-1. Configure the virtual machine as shown in the figure. Make sure that the configuration matches exactly.
-![Virtual Machine Setup](<figs/Screenshot 2024-05-11 at 4.07.36 AM.png>)
-1. Push the deploy button at the bottom of the page.
-1. Go to the Your Servers page, and choose the server you just created.
-![alt text](<figs/Screenshot 2024-05-11 at 4.12.04 AM.png>)
-1. Wait until the server request is finished and the server starts to run before connecting to the server over SSH.
-![alt text](<figs/Screenshot 2024-05-11 at 4.14.40 AM.png>)
-1. When not in use, stop the server to only pay idle rate
-![alt text](<figs/Screenshot 2024-05-11 at 4.16.40 AM.png>)
-1. <mark>Make sure to delete the server after finishing the expriment to stop paying for it.</mark>
+This site provides the artifacts needed to run the experiments described in the paper "Massively Parallel Multi-Versioned Transaction Processing" accepted at OSDI 2024.
 
-## 2. Preparing Experiments on a Server
+Please follows the three steps shown below: 1) Setup (virtual machine) server, 2) Prepare server, and 3) Run experiments on server.
+
+## 1. Setup (virtual machine) server
+1. Use your brower to access FluidStack at https://console.fluidstack.io and then login in with the provided credentials. Click on the Virtual Machines tab to create a virtual machine.
+![FluidStack Homepage](<figs/1-welcome.png>)
+1. Select Ubuntu 22.04 (Plain) for the OS template.
+![OS Template](<figs/2-os-template.png>)
+1. Select RTX A6000 48GB for the GPU server type. Select 4 GPUs per server.
+![GPU Type](<figs/3-gpu-selection.png>)
+1. Add your SSH public key to access the server. If you have a github public key, you can copy and paste it from https://github.com/<gitusername>.keys. Also, name your server so that you can identify it.
+![SSH Keys](<figs/4-ssh-key.png>)
+1. Now you are ready to deploy your server. Check the server configuartion and then push the deploy button.
+![Deploy server](<figs/5-deploy.png>)
+1. Click on the Your Servers tab to see your server. Wait for your server to start running. You will see a green dot on the left when your server is running.
+![All Servers](<figs/6-all-servers.png>)
+1. Click on your server. To login to the server, you will need to use the username "ubuntu" and the IP address shown on the top right.
+![Server](<figs/7-server.png>)
+1. When the server is not in use, stop the server to only pay the idle rate. You can restart the server at any time and continue using it. Restarting a server takes a minute or so.
+![Manage Server](<figs/8-manage-server.png>)
+1. <mark>Make sure to delete the server after finishing the experiments to stop paying for the server. If you need to redo the experiments, then you will need to redo all the steps shown here.</mark>
+
+## 2. Prepare Server
 1. ssh to the server
 1. clone this repo with submodules using
    ```bash

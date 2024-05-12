@@ -6,7 +6,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 
 ## 1. Setup (virtual machine) server
 
-1. Use your browser to access [FluidStack](https://console.fluidstack.io) and then login in with the provided credentials. Click on the "Virtual Machines" tab to create a virtual machine.
+1. Use your browser to access [FluidStack](https://console.fluidstack.io) and then login in with the credentials provided on `hotcrp`. Click on the "Virtual Machines" tab to create a virtual machine.
 
 ![FluidStack Homepage](<figs/1-welcome.png>)
 
@@ -18,7 +18,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 
 ![GPU Type](<figs/3-gpu-selection.png>)
 
-4. Add your SSH public key to access the server. If you have a github public key, you can copy and paste it from https://github.com/[gitusername].keys. Also, name your server so that you can identify it.
+4. Add your SSH public key to access the server. If you have a github public key, you can copy and paste it from `https://github.com/[gitusername].keys`. Also, name your server so that you can identify it.
 
 ![SSH Keys](<figs/4-ssh-key.png>)
 

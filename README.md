@@ -6,7 +6,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 
 ## 1. Setup (virtual machine) server
 
-1. Use your browser to access [FluidStack](https://console.fluidstack.io) and then login in with the credentials provided on `hotcrp`. Click on the "Virtual Machines" tab to create a virtual machine.
+1. Use your browser to access [FluidStack](https://console.fluidstack.io) and then login in with the credentials provided on the hotcrp website. Click on the "Virtual Machines" tab to create a virtual machine.
 
 ![FluidStack Homepage](<figs/1-welcome.png>)
 

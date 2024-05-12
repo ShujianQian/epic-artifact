@@ -26,7 +26,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 
 ![Deploy server](<figs/5-deploy.png>)
 
-6. Click on the "Your Servers" tab to see your server. Wait for your server to start running. You will see a green dot on the left when your server is running. This might take a minute or so.
+6. Click on the "Your Servers" tab to see your server. Wait for your server to start running. You will see a green dot on the left when your server is running. This may take 1-2 minutes.
 
 ![All Servers](<figs/6-all-servers.png>)
 

@@ -6,15 +6,15 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 
 ## 1. Setup (virtual machine) server
 
-1. Use your brower to access FluidStack at https://console.fluidstack.io and then login in with the provided credentials. Click on the Virtual Machines tab to create a virtual machine.
+1. Use your brower to access FluidStack at https://console.fluidstack.io and then login in with the provided credentials. Click on the "Virtual Machines" tab to create a virtual machine.
 
 ![FluidStack Homepage](<figs/1-welcome.png>)
 
-2. Select Ubuntu 22.04 (Plain) for the OS template.
+2. Select `Ubuntu 22.04 (Plain)` for the OS template.
 
 ![OS Template](<figs/2-os-template.png>)
 
-3. Select RTX A6000 48GB for the GPU server type. Select 4 GPUs per server.
+3. Select `RTX A6000 48GB` for the GPU server type. Select `4` GPUs per server.
 
 ![GPU Type](<figs/3-gpu-selection.png>)
 
@@ -26,22 +26,24 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 
 ![Deploy server](<figs/5-deploy.png>)
 
-6. Click on the Your Servers tab to see your server. Wait for your server to start running. You will see a green dot on the left when your server is running.
+6. Click on the "Your Servers" tab to see your server. Wait for your server to start running. You will see a green dot on the left when your server is running. This might take a minute or so.
 
 ![All Servers](<figs/6-all-servers.png>)
 
-7. Click on your server. To login to the server, you will need to use the username "ubuntu" and the IP address shown on the right.
+7. Click on your server. To login to the server via `ssh`, you will need to use the username `ubuntu` and the IP address shown on the right.
 
 ![Server](<figs/7-server.png>)
 
-8. When the server is not in use, stop the server to only pay the idle rate. You can restart the server at any time and continue using it. Restarting a server takes a minute or so.
+8. When the server is not in use, stop the server to only pay the idle rate. You can restart the server at any time and continue using it.
 
 ![Manage Server](<figs/8-manage-server.png>)
 
 9. <mark>Make sure to delete the server after finishing the experiments to stop paying for the server. If you need to rerun the experiments, then you will need to redo all the steps shown here.</mark>
 
 ## 2. Prepare server for the experiments
-1. Login to the the server using `ssh ubuntu@server_ipaddr`.
+1. Login to the the server.
+   ```ssh ubuntu@server_ipaddr
+   ```
 1. Clone this repo with submodules.
    ```bash
    git clone --recursive https://github.com/ShujianQian/epic-artifact.git
@@ -51,12 +53,12 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
    cd epic-artifact
    sudo ./install_dependencies.sh
    ```
-   This script installs all dependencies required for the experiments including the GPU driver. The script requires sudo privileges to install packages on your server. It will run for roughly 10 minutes, so get a coffee.
+   This script installs all the dependencies required for the experiments, including the GPU driver. The script requires sudo privileges to install packages on your server. It will run for roughly 10 minutes, so get a coffee.
 
    <mark> At the end, the script will reboot the server to start running the GPU driver.</mark>
 1. Reconnect to the server after it has rebooted and go to the artifact directory.
    ```bash
-   ssh ubuntu@server_ipaddr   
+   ssh ubuntu@server_ipaddr
    cd epic-artifact
    ```
 1. Build the executables for all systems using the build_binaries.sh script.
@@ -70,25 +72,25 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
    # in epic-artifact
    ./run_experiments.sh
    ```
-   The experiment run takes roughly 4.5 hours.
+   This script will run the experiments for roughly 4.5 hours.
 
 ## 4. Process the Experiment Output
-1. Run the following script to parse the experiment output.
+1. Run the following script to parse the output of the experiments.
    ```bash
    # in epic-artifact
    ./parse_experiments.sh
    ```
-   The parsed experiments will be stored under `epic-artifact/data/`.
-2. Run the following script to generate the plots using the parsed data.
+   The parsed outputs will be stored under the `epic-artifact/data/` directory.
+2. Run the following script to generate the figures shown in the paper using the parsed outputs.
    ```bash
    # in epic-artifact
    ./plot.sh
    ```
-   The script will create the following figures under `epic-artifact/output/`.
+   This script will create the following figures under `epic-artifact/output/`.
    ```
    04_tpccfull_throughput.png  05a_tpccnp_throughput.png  05b_tpccnp_throughput_gacco_commutative.png  06_ycsb_throughput.png  07_cpu_throughput.png  09_latency.png  10_microbenchmark.png
    ```
-   The figures are labeled the same figure number as in the paper for reference.
+   The file names for each figure has a number label (e.g., `04`) that is the same as the figure number (e.g., `Figure 4`) in the paper.
 
 
 ## Problems

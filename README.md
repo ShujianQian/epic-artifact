@@ -34,11 +34,11 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 
 ![Server](<figs/7-server.png>)
 
-8. When the server is not in use, stop the server to only pay the idle rate. You can restart the server at any time and continue using it.
+8. When the server is not in use, **stop** the server to only pay the idle rate. You can restart the server at any time and continue using it.
 
 ![Manage Server](<figs/8-manage-server.png>)
 
-9. Make sure to delete the server after finishing the experiments to stop paying for the server. If you need to rerun the experiments, then you will need to redo all the steps shown here.
+9. Make sure to **delete** the server after finishing the experiments to stop paying for the server. If you need to rerun the experiments, then you will need to redo all the steps shown here.
 
 ## 2. Prepare server for the experiments
 1. Login to the the server.

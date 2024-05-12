@@ -58,8 +58,15 @@ echo "export LD_LIBRARY_PATH=/usr/local/cuda/lib64:\$LD_LIBRARY_PATH" >> ${USER_
 # Install other dependencies
 apt-get install -y --quiet cmake binutils libjemalloc-dev build-essential libnuma-dev ninja-build default-jre autoconf python-is-python3 clang zip make g++ libboost-dev libc++-dev libc++abi-dev
 
-
 echo -e "${GREEN}Installation completed successfully.${NC}"
+
+echo -e "${GREEN}Overwriting memlock limit.${NC}"
+echo -e "*\t-\tmemlock\tunlimited" >> /etc/security/limits.conf
+
+echo -e "${GREEN}Install required python libraries.${NC}"
+wget https://bootstrap.pypa.io/get-pip.py
+python3 get-pip.py
+python3 -m pip --no-input install numpy pandas matplotlib
 
 # Function to handle SIGINT (Ctrl-C)
 function handle_ctrl_c {

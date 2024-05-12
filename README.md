@@ -56,7 +56,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
    ```
    This script installs all the dependencies required for the experiments, including the GPU driver. The script requires sudo privileges to install packages on your server. It will run for roughly 10 minutes, so get a coffee.
 
-   <mark> At the end, the script will reboot the server to start running the GPU driver.</mark>
+   <mark> At the end, the script will reboot the server (to start the GPU driver) so your ssh session will be disconnected.</mark>
 1. Reconnect to the server after it has rebooted and go to the artifact directory.
    ```bash
    ssh ubuntu@server_ipaddr

@@ -38,7 +38,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 
 ![Manage Server](<figs/8-manage-server.png>)
 
-9. <mark>Make sure to delete the server after finishing the experiments to stop paying for the server. If you need to rerun the experiments, then you will need to redo all the steps shown here.</mark>
+9. Make sure to delete the server after finishing the experiments to stop paying for the server. If you need to rerun the experiments, then you will need to redo all the steps shown here.
 
 ## 2. Prepare server for the experiments
 1. Login to the the server.
@@ -101,10 +101,9 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 
 
 ## Problems
-1. Aria's dependencies cannot be installed alongside those for Caracal. This is because the libunwind package required by Aria's google-glog package conflicts with the libc++ and libc++abi packages required by Caracal. See:
-  - https://github.com/rust-lang/crates-build-env/issues/125
-  - https://bugs.launchpad.net/ubuntu/+source/google-glog/+bug/1991919
-Since we install all packages on the server before running all the experiments for this artifact evaluation, we are unable to generate the Aria outputs.     
+1. Aria's dependencies cannot be installed alongside those for Caracal. This is because the libunwind package required by Aria's google-glog package conflicts with the libc++ and libc++abi packages required by Caracal. Since we install all packages on the server before running all the experiments for this artifact evaluation, we are unable to generate the Aria outputs. For more information about the package conflicts, please see:
+    - https://github.com/rust-lang/crates-build-env/issues/125
+    - https://bugs.launchpad.net/ubuntu/+source/google-glog/+bug/1991919
 
 ## Notes
 1. Run `nvidia-smi` to verify that the Nvidia driver is running

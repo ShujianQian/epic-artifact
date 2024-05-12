@@ -34,7 +34,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 
 ![Server](<figs/7-server.png>)
 
-8. When the server is not in use, ==stop== the server to only pay the idle rate. You can restart the server at any time and continue using it.
+8. When the server is not in use, **stop** the server to only pay the idle rate. You can restart the server at any time and continue using it.
 
 ![Manage Server](<figs/8-manage-server.png>)
 

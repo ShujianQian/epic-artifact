@@ -63,6 +63,9 @@ echo -e "${GREEN}Installation completed successfully.${NC}"
 echo -e "${GREEN}Overwriting memlock limit.${NC}"
 echo -e "*\t-\tmemlock\tunlimited" >> /etc/security/limits.conf
 
+echo -e "${GREEN}Enable hugepages.${NC}"
+echo -e "vm.nr_hugepages = 50000" >> /etc/sysctl.conf
+
 echo -e "${GREEN}Install required python libraries.${NC}"
 wget https://bootstrap.pypa.io/get-pip.py
 python3 get-pip.py

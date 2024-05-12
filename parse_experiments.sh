@@ -23,6 +23,7 @@ python3 ./caracal/parse_caracal_result.py ./caracal/caracal_ycsb_output/ ./data/
 python3 ./caracal/parse_caracal_ycsb_latency_result.py ./caracal/caracal_ycsb_output/ ./data/caracal/ycsb/
 python3 ./caracal/parse_tpcc_result.py ./caracal/caracal_tpcc_output/ ./data/caracal/tpcc/
 python3 ./caracal/parse_tpcc_latency_result.py ./caracal/caracal_tpcc_output/ ./data/caracal/tpcc/
+python3 ./caracal/parse_tpcc_latency_result.py ./caracal/caracal_tpccfull_output/ ./data/caracal/tpccfull/
 
 echo -e "${GREEN}Parsing STO reulsts...${NC}"
 python3 ./sto/parse_ycsb_results.py ./sto/sto_output/ ./data/sto

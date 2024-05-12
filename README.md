@@ -2,7 +2,9 @@
 
 ## 1. Request Virtual Machine
 1. Log into FluidStack with the provided credentials and go to the virtual machines page.
-<img src="figs/screenshot1.svg" alt="FluidStack Homepage">
+<div align="center">
+     <img src="figs/screenshot1.svg" alt="FluidStack Homepage">
+</div>
 1. Configure the virtual machine as shown in the figure. Make sure that the configuration matches exactly.
 ![Virtual Machine Setup](<figs/Screenshot 2024-05-11 at 4.07.36 AM.png>)
 1. Push the deploy button at the bottom of the page.

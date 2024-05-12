@@ -38,29 +38,32 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 
 ![Manage Server](<figs/8-manage-server.png>)
 
-9. <mark>Make sure to delete the server after finishing the experiments to stop paying for the server. If you need to redo the experiments, then you will need to redo all the steps shown here.</mark>
+9. <mark>Make sure to delete the server after finishing the experiments to stop paying for the server. If you need to rerun the experiments, then you will need to redo all the steps shown here.</mark>
 
 ## 2. Prepare server for the experiments
-1. ssh to the server
-1. clone this repo with submodules using
+1. Login to the the server using `ssh ubuntu@server_ipaddr`.
+1. Clone this repo with submodules.
    ```bash
    git clone --recursive https://github.com/ShujianQian/epic-artifact.git
    ```
-1. install dependencies with
+1. Install dependencies.
    ```bash
    cd epic-artifact
    sudo ./install_dependencies.sh
    ```
-   This script installs all dependencies required for the experiment including the GPU driver. At the end of the script, it will reboot the server to start running the GPU driver. Reconnect SSH after rebooting.
+   This script installs all dependencies required for the experiments including the GPU driver. The script requires sudo privileges to install packages on your server. It will run for roughly 10 minutes, so get a coffee.
 
-   <mark>The script requires sudo privilege to install the packages.</mark>
-1. build the executables for all systems using the build_binaries.sh script.
+   <mark> At the end, the script will reboot the server to start running the GPU driver.</mark>
+1. Reconnect to the server after it has rebooted and go to the artifact directory.
    ```bash
+   ssh ubuntu@server_ipaddr   
    cd epic-artifact
+   ```
+1. Build the executables for all systems using the build_binaries.sh script.
+   ```bash
    ./build_binaries.sh
-   ``` 
-   <mark>Make sure the pwd is in the repo root before running the script.</mark>
-
+   ```
+   This script will run for roughly 4 minutes.
 ## 3. Running Experiments
 WIP
 

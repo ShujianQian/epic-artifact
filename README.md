@@ -68,38 +68,43 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
    ```
    This script will run for roughly 4 minutes.
 ## 3. Running Experiments
-1. Run the following script to run the experiments.
+1. Run all the experiments.
    ```bash
    # in epic-artifact
    ./run_experiments.sh
    ```
    This script will run the experiments for roughly 4.5 hours.
 
-## 4. Process the Experiment Output
-1. Run the following script to parse the output of the experiments.
+## 4. Process the Experiment Outputs
+1. Parse the output of the experiments.
    ```bash
    # in epic-artifact
    ./parse_experiments.sh
    ```
    The parsed outputs will be stored under the `epic-artifact/data/` directory.
-2. Run the following script to generate the figures shown in the paper using the parsed outputs.
+2. Generate figures using the parsed outputs.
    ```bash
    # in epic-artifact
    ./plot.sh
    ```
    This script will create the following figures under `epic-artifact/output/`.
    ```
-   04_tpccfull_throughput.png  05a_tpccnp_throughput.png  05b_tpccnp_throughput_gacco_commutative.png  06_ycsb_throughput.png  07_cpu_throughput.png  09_latency.png  10_microbenchmark.png
+   04_tpccfull_throughput.png
+   05a_tpccnp_throughput.png
+   05b_tpccnp_throughput_gacco_commutative.png
+   06_ycsb_throughput.png
+   07_cpu_throughput.png
+   09_latency.png
+   10_microbenchmark.png
    ```
    The file names for each figure has a number label (e.g., `04`) that is the same as the figure number (e.g., `Figure 4`) in the paper.
 
 
 ## Problems
-1. Aria's dependencies cannot be installed alongside those for Caracal
-    - This is because the libunwind required by Aria's google-glog package conflits with libc++ and libc++abi required by Caracal.
-    - see: https://github.com/rust-lang/crates-build-env/issues/125
-    - see also: https://bugs.launchpad.net/ubuntu/+source/google-glog/+bug/1991919
-    - As a result, Aria experiments are not run as part of this repo.
+1. Aria's dependencies cannot be installed alongside those for Caracal. This is because the libunwind package required by Aria's google-glog package conflicts with the libc++ and libc++abi packages required by Caracal. See:
+  - https://github.com/rust-lang/crates-build-env/issues/125
+  - https://bugs.launchpad.net/ubuntu/+source/google-glog/+bug/1991919
+Since we install all packages on the server before running all the experiments for this artifact evaluation, we are unable to generate the Aria outputs.     
 
 ## Notes
 1. Run `nvidia-smi` to verify that the Nvidia driver is running

@@ -42,7 +42,8 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 
 ## 2. Prepare server for the experiments
 1. Login to the the server.
-   ```ssh ubuntu@server_ipaddr
+   ```bash
+   ssh ubuntu@server_ipaddr
    ```
 1. Clone this repo with submodules.
    ```bash

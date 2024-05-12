@@ -65,7 +65,30 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
    ```
    This script will run for roughly 4 minutes.
 ## 3. Running Experiments
-WIP
+1. Run the following script to run the experiments.
+   ```bash
+   # in epic-artifact
+   ./run_experiments.sh
+   ```
+   The experiment run takes roughly 4.5 hours.
+
+## 4. Process the Experiment Output
+1. Run the following script to parse the experiment output.
+   ```bash
+   # in epic-artifact
+   ./parse_experiments.sh
+   ```
+   The parsed experiments will be stored under `epic-artifact/data/`.
+2. Run the following script to generate the plots using the parsed data.
+   ```bash
+   # in epic-artifact
+   ./plot.sh
+   ```
+   The script will create the following figures under `epic-artifact/output/`.
+   ```
+   04_tpccfull_throughput.png  05a_tpccnp_throughput.png  05b_tpccnp_throughput_gacco_commutative.png  06_ycsb_throughput.png  07_cpu_throughput.png  09_latency.png  10_microbenchmark.png
+   ```
+   The figures are labeled the same figure number as in the paper for reference.
 
 
 ## Problems

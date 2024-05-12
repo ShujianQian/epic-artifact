@@ -54,7 +54,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
    cd epic-artifact
    sudo ./install_dependencies.sh
    ```
-   This script installs all the dependencies required for the experiments, including the GPU driver. The script requires sudo privileges to install packages on your server. It will run for roughly 10 minutes, so get a coffee.
+   This script installs all the dependencies required for the experiments, including the GPU driver. The script requires sudo privileges to install packages on your server. It will run for roughly `5-10` minutes, so get a coffee.
 
    <mark> At the end, the script will reboot the server (to start the GPU driver) so your ssh session will be disconnected.</mark>
 1. Reconnect to the server after it has rebooted and go to the artifact directory.
@@ -66,14 +66,14 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
    ```bash
    ./build_binaries.sh
    ```
-   This script will run for roughly 4 minutes.
+   This script will run for roughly `2-4` minutes.
 ## 3. Running Experiments
 1. Run all the experiments.
    ```bash
    # in epic-artifact
    ./run_experiments.sh
    ```
-   This script will run the experiments for roughly 4.5 hours.
+   This script will run the experiments for roughly `4.5` hours.
 
 ## 4. Process the Experiment Outputs
 1. Parse the outputs of the experiments.

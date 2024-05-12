@@ -2,7 +2,7 @@
 
 This site provides the artifacts needed to run the experiments described in the paper "Massively Parallel Multi-Versioned Transaction Processing" accepted at OSDI 2024.
 
-Please follows the three steps shown below: 1) Setup (virtual machine) server, 2) Prepare server, and 3) Run experiments on server.
+Please follows the three steps shown below: 1) Setup (virtual machine) server, 2) Prepare server for the experiments, and 3) Run experiments on server.
 
 ## 1. Setup (virtual machine) server
 1. Use your brower to access FluidStack at https://console.fluidstack.io and then login in with the provided credentials. Click on the Virtual Machines tab to create a virtual machine.
@@ -23,7 +23,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 ![Manage Server](<figs/8-manage-server.png>)
 1. <mark>Make sure to delete the server after finishing the experiments to stop paying for the server. If you need to redo the experiments, then you will need to redo all the steps shown here.</mark>
 
-## 2. Prepare Server
+## 2. Prepare server for the experiments
 1. ssh to the server
 1. clone this repo with submodules using
    ```bash

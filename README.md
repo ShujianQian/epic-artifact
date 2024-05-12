@@ -11,7 +11,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 ![OS Template](<figs/2-os-template.png>)
 1. Select RTX A6000 48GB for the GPU server type. Select 4 GPUs per server.
 ![GPU Type](<figs/3-gpu-selection.png>)
-1. Add your SSH public key to access the server. If you have a github public key, you can copy and paste it from https://github.com/`<gitusername>`.keys. Also, name your server so that you can identify it.
+1. Add your SSH public key to access the server. If you have a github public key, you can copy and paste it from https://github.com/\<gitusername>.keys. Also, name your server so that you can identify it.
 ![SSH Keys](<figs/4-ssh-key.png>)
 1. Now you are ready to deploy your server. Check the server configuartion and then push the deploy button.
 ![Deploy server](<figs/5-deploy.png>)

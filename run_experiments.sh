@@ -42,3 +42,6 @@ cd $STO_DIR
 bash ./run_my_tpcc.sh ${STO_DIR}/sto_output
 bash ./run_my_tpccfull.sh ${STO_DIR}/sto_output
 bash ./run_my_ycsb.sh ${STO_DIR}/sto_output
+
+echo -e "${GREEN}Experiment runs finished, try to notify the user...${NC}"
+bash ./mail.sh

@@ -44,4 +44,5 @@ bash ./run_my_tpccfull.sh ${STO_DIR}/sto_output
 bash ./run_my_ycsb.sh ${STO_DIR}/sto_output
 
 echo -e "${GREEN}Experiment runs finished, try to notify the user...${NC}"
+cd ${ARTIFACT_ROOTDIR}
 bash ./mail.sh

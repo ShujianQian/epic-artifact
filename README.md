@@ -77,7 +77,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
    # in epic-artifact
    ./run_experiments.sh
    ```
-   This script will run the experiments for roughly `4.5` hours. Assuming mail delivery works (as described above), you will receive an email when the experiments are done.
+   This script will run the experiments for roughly `5` hours. Assuming mail delivery works (as described above), you will receive an email when the experiments are done.
 
 ## 4. Process the Experiment Outputs
 1. Parse the outputs of the experiments.

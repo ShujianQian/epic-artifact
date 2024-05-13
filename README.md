@@ -91,7 +91,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
    # in epic-artifact
    ./plot.sh
    ```
-   This script will create the following figures under `epic-artifact/output/`.
+   This script will create the following figures under the `epic-artifact/output/` directory.
    ```
    04_tpccfull_throughput.png
    05a_tpccnp_throughput.png

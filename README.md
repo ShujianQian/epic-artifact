@@ -2,9 +2,9 @@
 
 This site provides the artifacts needed to run the experiments described in the paper "Massively Parallel Multi-Versioned Transaction Processing" accepted at OSDI 2024.
 
-Please follows the three steps shown below: 1) Setup (virtual machine) server, 2) Prepare server for the experiments, and 3) Run experiments on server.
+Please follow the four steps shown below: 1) Setup (virtual machine) server, 2) Prepare server for the experiments, 3) Run experiments on server, 4) Process the experiment outputs to generate figures.
 
-## 1. Setup (virtual machine) server
+## 1. Setup (Virtual Machine) Server
 
 1. Use your browser to access [FluidStack](https://console.fluidstack.io) and then login in with the credentials provided on the hotcrp website. Click on the "Virtual Machines" tab to create a virtual machine.
 
@@ -40,7 +40,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 
 9. Make sure to **delete** the server after finishing the experiments to stop paying for the server. If you need to rerun the experiments, then you will need to redo all the steps shown here.
 
-## 2. Prepare server for the experiments
+## 2. Prepare Server for Experiments
 1. Login to the the server.
    ```bash
    ssh ubuntu@server_ipaddr
@@ -71,7 +71,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
    ```bash
    ./mail.sh
    ```
-## 3. Running Experiments
+## 3. Run Experiments
 1. Run all the experiments.
    ```bash
    # in epic-artifact

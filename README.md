@@ -14,7 +14,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 
 ![OS Template](<figs/2-os-template.png>)
 
-3. Select `RTX A6000 48GB` for the GPU server type. Select `4` GPUs per server.
+3. Select `RTX A6000 48GB` for the GPU server type. Select `4` GPUs per server. We suggest choosing the `Norway` server (for reasons described under the Problems section below).
 
 ![GPU Type](<figs/3-gpu-selection.png>)
 
@@ -104,6 +104,7 @@ Please follows the three steps shown below: 1) Setup (virtual machine) server, 2
 1. Aria's dependencies cannot be installed alongside those for Caracal. This is because the libunwind package required by Aria's google-glog package conflicts with the libc++ and libc++abi packages required by Caracal. Since we install all packages on the server before running all the experiments for this artifact evaluation, we are unable to generate the Aria outputs. For more information about the package conflicts, please see:
     - https://github.com/rust-lang/crates-build-env/issues/125
     - https://bugs.launchpad.net/ubuntu/+source/google-glog/+bug/1991919
+2. The Caracal database pins memory pages (using `memlock`). We have found that memory pinning is unreliable on the VM servers. It sometimes fails on the Canada servers but we have not seen this failure on the Norway servers, even though both the servers appear to have the same configurations. Hence we suggest using the Norway servers. However, we don't understand the reason for this failure and so it is possible that the Caracal results may not be reproducible if this failure occurs during a run.
 
 ## Notes
 1. Run `nvidia-smi` to verify that the Nvidia driver is running

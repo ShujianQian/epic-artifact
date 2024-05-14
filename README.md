@@ -108,6 +108,7 @@ Please follow the four steps shown below: 1) Setup (virtual machine) server, 2) 
     - https://github.com/rust-lang/crates-build-env/issues/125
     - https://bugs.launchpad.net/ubuntu/+source/google-glog/+bug/1991919
 2. The Caracal database pins memory pages (using `memlock`). We have found that memory pinning is unreliable on the VM servers. It sometimes fails on the Canada servers but we have not seen this failure on the Norway servers, even though both the servers appear to have the same configurations. Hence we suggest using the Norway servers. However, we don't understand the reason for this failure and so it is possible that the Caracal results may not be reproducible if this failure occurs during a run.
+3. We have occasionally seen problems with Epic where its GPU memory allocator hangs for a minute or two on the VM server. This significantly shows down the experimental runs. These problems are not consistently reproducible and we believe they may be caused by virtualization (since they don't happen on our local machines). If this happens, we have found that deleting an recreating a server solves the issue. 
 
 ## Notes
 1. Run `nvidia-smi` to verify that the Nvidia driver is running

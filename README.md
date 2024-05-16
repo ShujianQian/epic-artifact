@@ -77,7 +77,7 @@ Please follow the four steps shown below: 1) Setup (virtual machine) server, 2) 
    # in epic-artifact
    ./test_experiments.sh
    ```
-   This script runs a subset of experiments for you to check for obvious errors. It will take approximately `6` minutes to complete.
+   This script runs a subset of experiments allowing you to check for obvious errors. It will take approximately `6` minutes to complete.
 1. Run all the experiments.
    ```bash
    # in epic-artifact
@@ -86,6 +86,7 @@ Please follow the four steps shown below: 1) Setup (virtual machine) server, 2) 
    This script will run the experiments for roughly `5` hours. Assuming mail delivery works (as described above), you will receive an email when the experiments are done.
 
 ## 4. Process the Experiment Outputs
+The evaluation is almost complete! The following steps for processing the experiment outputs are relatively short. 
 1. Parse the outputs of the experiments.
    ```bash
    # in epic-artifact
@@ -107,7 +108,11 @@ Please follow the four steps shown below: 1) Setup (virtual machine) server, 2) 
    09_latency.png
    10_microbenchmark.png
    ```
-   The file name for each figure has a number label (e.g., `04`) that is the same as the figure number (e.g., `Figure 4`) in the paper. You can use `scp` or `rsync` to download these files to your local machine. Once you have verified that the figures in these files are similar to the figures in the paper, make sure to **delete** your server.
+   The file name for each figure has a number label (e.g., `04`) that is the same as the figure number (e.g., `Figure 4`) in the paper. You can use `scp` or `rsync` to download these files to your local machine.
+3. Verify the results.
+Verify that the figures in the files above are similar to the figures in the paper.
+4. Delete the server.
+**Make sure to delete your server.**
 
 ## Problems
 1. Aria's dependencies cannot be installed alongside those for Caracal. This is because the libunwind package required by Aria's google-glog package conflicts with the libc++ and libc++abi packages required by Caracal. Since we install all packages on the server before running all the experiments for this artifact evaluation, we are unable to generate the Aria outputs. For more information about the package conflicts, please see:

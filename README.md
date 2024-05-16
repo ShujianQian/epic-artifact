@@ -109,9 +109,9 @@ The evaluation is almost complete! The following steps for processing the experi
    10_microbenchmark.png
    ```
    The file name for each figure has a number label (e.g., `04`) that is the same as the figure number (e.g., `Figure 4`) in the paper. You can use `scp` or `rsync` to download these files to your local machine.
-3. Verify the results.
+3. Verify the results.\
 Verify that the figures in the files above are similar to the figures in the paper.
-4. Delete the server.
+4. Delete the server.\
 **Make sure to delete your server.**
 
 ## Problems

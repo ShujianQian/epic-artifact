@@ -2,7 +2,7 @@
 
 This site provides the artifacts needed to run the experiments described in the paper "Massively Parallel Multi-Versioned Transaction Processing" accepted at OSDI 2024.
 
-Please follow the four steps shown below: 1) Setup (virtual machine) server, 2) Prepare server for the experiments, 3) Run experiments on server, 4) Process the experiment outputs to generate figures.
+Please follow the five steps shown below: 1) Setup (virtual machine) server, 2) Prepare server for the experiments, 3) Run experiments on server, 4) Process the experiment outputs to generate figures, 5) Verify the results.
 
 ## 1. Setup (Virtual Machine) Server
 
@@ -84,7 +84,6 @@ Please follow the four steps shown below: 1) Setup (virtual machine) server, 2) 
    ./run_experiments.sh
    ```
    This script will run the experiments for roughly `5` hours. Assuming mail delivery works (as described above), you will receive an email when the experiments are done.
-
 ## 4. Process the Experiment Outputs
 The evaluation is almost complete! The following steps for processing the experiment outputs are relatively short. 
 1. Parse the outputs of the experiments.
@@ -109,10 +108,9 @@ The evaluation is almost complete! The following steps for processing the experi
    10_microbenchmark.png
    ```
    The file name for each figure has a number label (e.g., `04`) that is the same as the figure number (e.g., `Figure 4`) in the paper. You can use `scp` or `rsync` to download these files to your local machine.
-3. Verify the results.\
-Verify that the figures in the files above are similar to the figures in the paper.
-4. Delete the server.\
-**Make sure to delete your server.**
+## 4. Verify the results
+Verify that the figures in the files above are similar to the figures in the paper.\
+**Then make sure to delete your server.**
 
 ## Problems
 1. Aria's dependencies cannot be installed alongside those for Caracal. This is because the libunwind package required by Aria's google-glog package conflicts with the libc++ and libc++abi packages required by Caracal. Since we install all packages on the server before running all the experiments for this artifact evaluation, we are unable to generate the Aria outputs. For more information about the package conflicts, please see:

@@ -72,6 +72,12 @@ Please follow the four steps shown below: 1) Setup (virtual machine) server, 2) 
    ./mail.sh
    ```
 ## 3. Run Experiments
+1. (Optional) We recommend testing the server setup and compilation with a short test experiment first.
+   ```bash
+   # in epic-artifact
+   ./test_experiments.sh
+   ```
+   This script runs a subset of experiments for you to check for obvious errors. It will take approximately `6` minutes to complete.
 1. Run all the experiments.
    ```bash
    # in epic-artifact

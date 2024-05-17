@@ -67,7 +67,7 @@ Please follow the five steps shown below: 1) Setup (virtual machine) server, 2) 
    ./build_binaries.sh
    ```
    This script will run for roughly `2-4` minutes.
-1. Provide your email address. This is an optional step but it will allow us to send you an email when the experiments are done. Create a file called `email.txt` in the `epic-artifact` directory containing the three lines described under the "Specific hardware" section of the hotcrp site. Then, test whether you receive an email from us by running the following script.
+1. Provide your email address. Since the review process is single blind, please ensure that your email address is **anonymized**. This is an **optional** step but it will allow us to send you an email when the experiments are done (which take a while, as mentioned below). Create a file called `email.txt` in the `epic-artifact` directory containing the three lines described under the "Specific hardware" section of the hotcrp site. Then, test whether you receive an email from us by running the following script.
    ```bash
    ./mail.sh
    ```
